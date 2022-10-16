@@ -1,12 +1,12 @@
 :root {
-  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+  font-family: "Roboto";
   font-size: 16px;
   line-height: 24px;
   font-weight: 400;
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  background-color: #171717;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -42,46 +42,52 @@ h1 {
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  background-color: #2a2a2a;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.vanilla:hover {
-  filter: drop-shadow(0 0 2em #3178c6aa);
+#app > div {
+  padding: 5px;
 }
 
-.card {
-  padding: 2em;
+#app > div > p{
+  padding: 0px;
+  margin-top: -2px;
+  font-size: small;
+  text-align: left;
+  color: #FFFFFF50;
 }
 
-.read-the-docs {
-  color: #888;
+#app > div > input {
+  text-align: center;
+  font-size: 40px;
+  width: 200px;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
-button:hover {
-  border-color: #646cff;
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
 }
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+
+/*
+#app > div > input:first-of-type {
+  color: red;
 }
+#app > div > input:last-of-type {
+  color: green;
+}*/
+
 
 @media (prefers-color-scheme: light) {
   :root {
