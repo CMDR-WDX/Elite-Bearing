@@ -35,7 +35,6 @@ jobs:
     name: Deploy
     needs: build
     runs-on: ubuntu-latest
-    if: github.ref == "refs/heads/main" # Only run if we are at the HEAD of this Repo
   
     steps:
       - name: Download Artifacts
