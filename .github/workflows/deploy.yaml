@@ -1,0 +1,50 @@
+# This deploy config has been primarily stolen from
+# https://github.com/sitek94/vite-deploy-demo/blob/main/.github/workflows/deploy.yml
+name: Deploy
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v2
+      - name: Setup Nodejs
+        uses: actions/setup-node@v1
+        with:
+          node-version: 16
+      - name: Install dependencies
+        uses: bahmutov/npm-install@v1
+      - name: Run Tests
+        run: npm run test
+      - name: Build
+        run: npm run build
+      - name: Upload
+        uses: actions/upload-artifact@v2
+        with:
+          name: site
+          path: ./dist
+  
+  deploy:
+    name: Deploy
+    needs: build
+    runs-on: ubuntu-latest
+    if: github.ref == "refs/heads/main" # Only run if we are at the HEAD of this Repo
+  
+    steps:
+      - name: Download Artifacts
+      - uses: actions/download-artifact@v2
+        with:
+          name: site
+          path: ./dist
+      - name: Deploy to GH Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist
