@@ -1,37 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta property="og:title" content="Elite Bearing Helper" />
-    <meta property="og:description" content="Tool to help you find coordinates in Elite: Dangerous" />
-    <meta property="og:type" content="article" />
-    <meta property="og:url" content="https://cmdr-wdx.github.io/Elite-Bearing/" />
-    <meta property="og:image" content="https://cmdr-wdx.github.io/Elite-Bearing/og-image.png" /> 
-    <meta property="og:site_name" content="https://cmdr-wdx.github.io/Elite-Bearing/" />
-    <title>Elite Dangerous Bearing Helper</title>
-    <script type="module" crossorigin src="/Elite-Bearing/assets/index.4dca946c.js"></script>
-    <link rel="stylesheet" href="/Elite-Bearing/assets/index.89d537ce.css">
-  </head>
-  <body>
-    <div id="app">
-      <div>
-        <h4>You are here</h4>
-        <input id="fromlat" type="number" max="90" min="-90" value="0">
-        <input id="fromlong" type="number" max="180" min="-180" value="0">
-        <p>Latitude / Longtitude in Degrees</p>
-      </div>
-      <div>
-        <h4>You want to get here</h4>
-        <input id="tolat" type="number" max="90" min="-90" value="0">
-        <input id="tolong" type="number" max="180" min="-180" value="0">
-        <p>Latitude / Longtitude in Degrees</p>
-      </div>
-      <div>
-        <h4>This is your bearing</h4>
-        <h1 id="output">--:--</h1>
-      </div>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta property="og:title" content="Elite Bearing Helper" />
+  <meta property="og:description" content="Tool to help you find coordinates in Elite: Dangerous" />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://cmdr-wdx.github.io/Elite-Bearing/" />
+  <meta property="og:image" content="https://cmdr-wdx.github.io/Elite-Bearing/og-image.png" />
+  <meta property="og:site_name" content="https://cmdr-wdx.github.io/Elite-Bearing/" />
+  <title>Elite Dangerous Bearing Helper</title>
+  <script type="module" crossorigin src="/Elite-Bearing/assets/index.4dca946c.js"></script>
+  <link rel="stylesheet" href="/Elite-Bearing/assets/index.89d537ce.css">
+</head>
+
+<body>
+  <div id="app">
+    <div>
+      <h4>You are here</h4>
+      <input id="fromlat" type="number" max="90" min="-90" value="0">
+      <input id="fromlong" type="number" max="180" min="-180" value="0">
+      <p>Latitude / Longitude in Degrees</p>
     </div>
-    
-  </body>
+    <div>
+      <h4>You want to get here</h4>
+      <input id="tolat" type="number" max="90" min="-90" value="0">
+      <input id="tolong" type="number" max="180" min="-180" value="0">
+      <p>Latitude / Longitude in Degrees</p>
+    </div>
+    <div>
+      <h4>This is your bearing</h4>
+      <h1 id="output">--:--</h1>
+    </div>
+  </div>
+  
+</body>
+
 </html>
